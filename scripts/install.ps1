@@ -1,4 +1,4 @@
-# ============================================
+﻿# ============================================
 # Kwisatz Connector - Bootstrap/Update Script
 # ============================================
 # - Télécharge l'archive GitHub (branche main)
@@ -194,7 +194,7 @@ if ($AutoStart) {
     Write-Host "Démarrage de l'API en local sur http://localhost:8081 ..."
     Push-Location $InstallRoot
     & ".\venv\Scripts\Activate.ps1"
-    Start-Process -NoNewWindow -FilePath "uvicorn" -ArgumentList "app.main:app","--host","0.0.0.0","--port","8000","--workers","1"
+    Start-Process -NoNewWindow -FilePath "uvicorn" -ArgumentList "app.main:app","--host","0.0.0.0","--port","8081","--workers","1"
     Pop-Location
     Write-Host "✅ Uvicorn lancé (processus en arrière-plan)."
 }
